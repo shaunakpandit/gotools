@@ -16,7 +16,7 @@ func main() {
 
 	abs(&num)
 
-	fmt.Println(num, " is prime: ", isPrime(num, num-1))
+	fmt.Println(num, " is prime: ", isPrime(num, num/2))
 }
 
 func abs(n *int) int {
