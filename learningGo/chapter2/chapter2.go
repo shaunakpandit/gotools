@@ -1,8 +1,18 @@
-package chapter
+package chapter2
 
 import (
 	"fmt"
 )
+
+func All() {
+	fmt.Println("Exersize 1")
+	E1()
+	fmt.Println("Exersize 2")
+	E2()
+	fmt.Println("Exersize 3")
+	E3()
+
+}
 
 func E1() {
 	var i int = 20
