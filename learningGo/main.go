@@ -1,6 +1,6 @@
 package main
 
-import "learning/chapter2"
+import "learning/2"
 
 func main() {
 	chapter2.E3()
