@@ -1,8 +1,8 @@
 package main
 
 import (
+	"fmt"
 	"learning/chapter2"
-	"learning/chapter3"
 )
 
 func main() {
@@ -14,9 +14,12 @@ func chap2() {
 }
 
 func playground() {
-	var x []int
-	for len(x) < 10 {
-		x = append(x, len(x)+1)
-		chapter3.PrintSlice(x)
+	m := map[string]int{
+		"hello": 5,
+		"world": 3,
 	}
+
+	v, ok := m["no"]
+
+	fmt.Println(v, ok)
 }
