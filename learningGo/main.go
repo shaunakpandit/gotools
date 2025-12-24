@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"learning/chapter2"
+	"learning/chapter3"
 )
 
 func main() {
-	playground()
+	chapter3.All()
 }
 
 func chap2() {
