@@ -4,14 +4,23 @@ import (
 	"fmt"
 	"learning/chapter2"
 	"learning/chapter3"
+	"learning/chapter4"
 )
 
 func main() {
-	chapter3.All()
+	chapter4.E3()
 }
 
 func chap2() {
 	chapter2.All()
+}
+
+func chap3() {
+	chapter3.All()
+}
+
+func chap4() {
+	chapter4.All()
 }
 
 func playground() {
@@ -20,7 +29,8 @@ func playground() {
 		"world": 3,
 	}
 
-	v, ok := m["no"]
-
-	fmt.Println(v, ok)
+	for k, v := range m {
+		fmt.Println(m[k])
+		fmt.Println(v)
+	}
 }
