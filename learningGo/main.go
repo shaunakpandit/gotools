@@ -5,10 +5,14 @@ import (
 	"learning/chapter2"
 	"learning/chapter3"
 	"learning/chapter4"
+	"learning/chapter5"
 )
 
 func main() {
-	chapter4.E3()
+	prefixMachine := chapter5.E3("amazing")
+
+	prefixMachine("poop")
+	prefixMachine("shit")
 }
 
 func chap2() {
