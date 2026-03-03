@@ -1,6 +1,10 @@
 package bubblesort
 
-func BubbleSort(unsorted []int) []int {
+import "fmt"
 
+func BubbleSort(unsorted []int) []int {
+	for i, v := range unsorted {
+		fmt.Println("index: ", i, " value: ", v)
+	}
 	return unsorted
 }
