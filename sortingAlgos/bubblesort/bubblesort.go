@@ -1,6 +1,6 @@
 package bubblesort
 
-func bubbleSort(unsorted []int) []int {
+func BubbleSort(unsorted []int) []int {
 
 	return unsorted
 }

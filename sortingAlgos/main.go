@@ -2,11 +2,20 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"sortingAlgos/bubblesort"
 )
 
 func main() {
-	fmt.Print("test how this works")
-	output := bubblesort.bubbleSort()
-	fmt.Print()
+	randSlice := BuildSlice(10)
+	output := bubblesort.BubbleSort(randSlice)
+	fmt.Print(output)
+}
+
+func BuildSlice(size int) []int {
+	randSlice := make([]int, 0, size)
+	for i := 0; i < size; i++ {
+		randSlice = append(randSlice, rand.Intn(100))
+	}
+	return randSlice
 }
