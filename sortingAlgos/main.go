@@ -4,13 +4,22 @@ import (
 	"fmt"
 	"math/rand"
 	"sortingAlgos/bubblesort"
+	"time"
 )
 
 func main() {
 	randSlice := BuildSlice(20)
 	fmt.Println("unsorted:", randSlice)
-	output := bubblesort.BubbleSort(randSlice)
+	output := bubble(randSlice)
 	fmt.Println("sorted:", output)
+}
+
+func bubble(unsorted []int) []int {
+	start := time.Now()
+	sorted := bubblesort.BubbleSort(unsorted)
+	end := time.Now()
+	fmt.Println("bubbleSort took:", end.Sub(start).Nanoseconds(), "nano")
+	return sorted
 }
 
 func BuildSlice(size int) []int {
