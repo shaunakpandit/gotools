@@ -23,19 +23,22 @@ import (
 // 12. Intro Sort
 
 func main() {
-	bubbleTimed(1000, 100)
+	bubbleTimed(1000, 100, false)
 }
 
-func bubbleTimed(runs int, size int) {
+func bubbleTimed(runs int, size int, print bool) {
 	var totalTime int64 = 0
 	for range runs {
 		randSlice := BuildSlice(size)
-		fmt.Println("unsorted:", randSlice)
 		output, time := bubble(randSlice)
 		totalTime += time
-		fmt.Println("sorted:", output)
+		if print {
+			fmt.Println("unsorted:", randSlice)
+			fmt.Println("sorted:", output)
+			fmt.Println("bubbleSort took:", time, "nano")
+		}
 	}
-	fmt.Println("average duation nanos for ", runs, "runs:", totalTime/int64(runs), "nanos")
+	fmt.Println("average time to sort", size, "items, over", runs, "runs:", totalTime/int64(runs), "nanos")
 }
 
 func bubble(unsorted []int) ([]int, int64) {
@@ -43,7 +46,6 @@ func bubble(unsorted []int) ([]int, int64) {
 	sorted := bubblesort.BubbleSort(unsorted)
 	end := time.Now()
 	duration := end.Sub(start).Nanoseconds()
-	fmt.Println("bubbleSort took:", duration, "nano")
 	return sorted, duration
 }
 
